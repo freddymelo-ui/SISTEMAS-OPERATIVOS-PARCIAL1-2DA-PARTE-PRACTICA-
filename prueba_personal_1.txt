@@ -1,0 +1,6 @@
+# Archivo: prueba_personal_1.txt
+# Objetivo: Demostrar la baja espera (WT) para FCFS cuando RR es eficiente.
+#etiqueta; burst time (BT); arrival time (AT); Queue (Q): Priority(5>1)
+A;3; 0; 1; 5  # Cola 1: RR(3). BT = Quantum.
+B;3; 0; 1; 4  # Cola 1: RR(3). BT = Quantum.
+C;10; 0; 3; 3 # Cola 3: FCFS. Espera a que A y B terminen.
