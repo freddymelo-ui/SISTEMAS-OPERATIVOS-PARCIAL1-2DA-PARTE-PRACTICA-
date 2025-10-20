@@ -1,0 +1,6 @@
+# Archivo: prueba_personal_2.txt
+# Objetivo: Demostrar expropiación por llegada tardía de Q1 (A), y penalización a Q3 (C).
+#etiqueta; burst time (BT); arrival time (AT); Queue (Q): Priority(5>1)
+B;10; 0; 2; 4 # Cola 2: RR(5). Se ejecuta de t=0 a t=5.
+C;10; 0; 3; 3 # Cola 3: FCFS. Es la última en ejecutarse.
+A;6; 5; 1; 5  # Cola 1: RR(3). Llega en t=5 y expropia a B.
