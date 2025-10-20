@@ -17,5 +17,23 @@ Procesos interactivos
 Procesos por lotes
 Procesos del sistema
 
-A continuacion daré los puntos mas importantes para dar con el codigo enfocado en programacion a objetos teniendo en cuenta la informacion anterior:
+A continuacion daré los puntos mas importantes para entender el codigo enfocado en programacion a objetos teniendo en cuenta la informacion anterior:
 
+1. Para la creacion de un simulador MQL con la estructura RR(3), RR(5), FCFS se toma en cuenta las siguientes clases:
+   -  CLASE PROCESO
+   -  CLASE DE LOGICA: "ColaPlanificacion"
+   -  CLASE DE CONTROL: "Simulador MQL"
+
+2. CLASE PROCESO:
+    - Encapsula toda la informacion de una tarea, inicializa el proceso con sus datos de entradas y metricas.
+    - Actualiza el estado y reduce el tiempo restante y calcula el tiempo de respuesta.
+    - Finalmente calcula el tiempo de respuesta.
+  
+3. CLASE DE LOGICA:
+    - Aqui se usa la Herencia ya que se implementa el esquema seleccionado (RR(3), RR(5), FCFS)
+    - La ColaPlanificacion (Base) define la estructura basica de una cola, las colas hijas tales como: RR(3), RR(5) y FCFS, devuelven el proceso y el tiempo restante.
+   
+4. CLASE DE CONTROL:
+    - Usa la composicion y gestiona el reloj del sistema cargando los procesos, moviemdo y ejecutando la simulacion actualizando el estado si está terminado o nó.
+  
+  
